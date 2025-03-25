@@ -1,7 +1,7 @@
 package com.transactify.receiptapi.app.service
 
-import com.transactify.receiptapi.app.controller.request.PaymentDto
+import com.transactify.receiptapi.app.controller.request.PaymentRequest
 
 interface ReceiptService {
-    fun createReceipt(paymentDto: PaymentDto)
+    fun createReceipt(paymentRequest: PaymentRequest)
 }

@@ -1,8 +1,16 @@
 package com.transactify.receiptapi.infra.messageprovider.model
 
-import lombok.Data
+import com.transactify.receiptapi.domain.entity.enums.PaymentStatus
+import java.math.BigDecimal
+import java.time.LocalDateTime
 
-@Data
-class PaymentModel {
-    private lateinit var personId: String
-}
+data class PaymentModel (
+    val transactionId: String,
+    val personId: String,
+    val amount: BigDecimal,
+    val currency: String,
+    val paymentMethod: String,
+    val description: String?,
+    val paymentDate: LocalDateTime?,
+    var status: PaymentStatus
+)
